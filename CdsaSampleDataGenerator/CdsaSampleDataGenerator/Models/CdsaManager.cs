@@ -14,9 +14,9 @@ namespace CdsaSampleDataGenerator.Models {
 
   class CdsaManager {
     // 
-    const string cdsaInstanceId = "org4bbc0847";
+    const string cdsaInstanceId = "";
 
-    const string clientId = "0a36422b-60fc-462b-9cfb-4bbfdefb6147";
+    const string clientId = "";
     static readonly Uri redirectUri = new Uri("https://localhost/app1234");
 
     #region "Grungy stuff"
@@ -50,8 +50,8 @@ namespace CdsaSampleDataGenerator.Models {
 
     static string GetAccessTokenUnattended(string resourceUri = cdsaInstanceUrl) {
       if (cachedAccessToken.Equals("")) {
-        string userName = "student@cpt2019.onMicrosoft.com";
-        string userPassword = "Pa$$word!";
+        string userName = "XYZ@ABC.onMicrosoft.com";
+        string userPassword = "";
         var authContext = new AuthenticationContext(aadAuthorizationEndpoint);
         var userPasswordCredential = new UserPasswordCredential(userName, userPassword);
         AuthenticationResult result =
