@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDSA CM</title>
+  <link href="~/Content/bootstrap.css" rel="stylesheet" />
+  <link href="~/Content/font-awesome.css" rel="stylesheet" />
+  <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Add Banner with TopNav and Toolbar Here -->
+  <div id="banner">
+    <nav id="topnav" class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          @Html.ActionLink("CDSA Content Manager", "Index", "Home",
+                            routeValues: null, htmlAttributes: new { @class = "nav-link navbar-brand" })
+        </li>
+        <li class="nav-item">
+          @Html.ActionLink("Environments", "Environments", "Cdsa",
+                           routeValues: null, htmlAttributes: new { @class = "nav-link" })
+        </li>
+
+      </ul>
+      @Html.Partial("_LoginPartial")
+    </nav>
+  </div>
+
+  @if (User.Identity.IsAuthenticated) {
+    <!-- Add Main Body Content Here -->
+    <div id="left-nav" class="navigationPane navigationPaneCollapsed">
+      <ul id="left-nav-list" class="leftNavMenu">
+        <li class="leftNavItem">
+          <a id="left-nav-toggle">
+            <i class="leftNavIcon fa fa-bars"></i>
+            <span class="leftNavItemCaption">&nbsp;</span>
+          </a>
+        </li>
+        @CptUtils.LeftNavItem("Accounts", "Accounts", "Cdsa", "fa-institution")
+        @CptUtils.LeftNavItem("Contacts", "Contacts", "Cdsa", "fa-address-card")
+        @CptUtils.LeftNavItem("Entity Definitions", "EntityDefinitions", "Cdsa", "fa-sitemap")
+        @CptUtils.LeftNavItem("Publishers", "Publishers", "Cdsa", "fa-user-secret")
+        @CptUtils.LeftNavItem("Environments", "Environments", "Cdsa", "fa-database")
+      </ul>
+    </div>
+    <div id="content-body" class="contentBody contentBodyNavigationCollapsed">
+      <div class="container-fluid">
+        @RenderBody()
+      </div>
+    </div>
+  }
+  else {
+    <div id="content-body" class="contentBody">
+      <div class="container-fluid">
+        @RenderBody()
+      </div>
+    </div>
+  }
+
+  <script src="~/Scripts/jquery-3.3.1.js"></script>
+
+  <script src="~/Scripts/umd/popper.js"></script>
+
+  <script src="~/Scripts/bootstrap.js"></script>
+  <script src="~/App/app.js"></script>
+
+</body>
+</html>

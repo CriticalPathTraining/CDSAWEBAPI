@@ -1,0 +1,203 @@
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+  "Attributes": [
+    {
+      "AttributeType": "String",
+      "AttributeTypeName": {
+        "Value": "StringType"
+      },
+      "Description": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Name of the product",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Product Name",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "IsPrimaryName": true,
+      "RequiredLevel": {
+        "Value": "None",
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+      },
+      "SchemaName": "cpt_AcmeProductName",
+      "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+      "FormatName": {
+        "Value": "Text"
+      },
+      "MaxLength": 100
+    },
+    {
+      "AttributeType": "String",
+      "AttributeTypeName": {
+        "Value": "StringType"
+      },
+      "Description": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Code created by marketing",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Product Code",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "IsPrimaryName": true,
+      "RequiredLevel": {
+        "Value": "None",
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+      },
+      "SchemaName": "cpt_AcmeProductCode",
+      "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+      "FormatName": {
+        "Value": "Text"
+      },
+      "MaxLength": 100
+    },
+    {
+      "AttributeType": "String",
+      "AttributeTypeName": { "Value": "StringType" },
+      "Description": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Product Desc",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Product Description",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "IsPrimaryName": false,
+      "RequiredLevel": {
+        "Value": "None",
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+      },
+      "SchemaName": "cpt_AcmeProductDescription",
+      "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+      "FormatName": {
+        "Value": "Text"
+      },
+      "MaxLength": 100
+    },
+    {
+      "@odata.type": "#Microsoft.Dynamics.CRM.MoneyAttributeMetadata",
+      "MaxValue": 10000,
+      "MinValue": 0,
+      "Precision": 0,
+      "PrecisionSource": 2,
+      "CalculationOf": "cpt_listprice",
+      "IsBaseCurrency": true,
+      "AttributeType": "Money",
+      "SchemaName": "cpt_listprice_Base",
+      "MetadataId": "46d52c72-b742-4c33-a8bc-5f6c57007540",
+      "AttributeTypeName": { "Value": "MoneyType" },
+      "Description": {
+        "LocalizedLabels": [
+          {
+            "Label": "Value of the List Price in base currency.",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "8b9c0e8b-1efb-e811-a950-000d3a37f245",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "Value of the List Price in base currency.",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "8b9c0e8b-1efb-e811-a950-000d3a37f245",
+          "HasChanged": null
+        }
+      },
+      "DisplayName": {
+        "LocalizedLabels": [
+          {
+            "Label": "List Price (Base)",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "8d9c0e8b-1efb-e811-a950-000d3a37f245",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "List Price (Base)",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "8d9c0e8b-1efb-e811-a950-000d3a37f245",
+          "HasChanged": null
+        }
+      }
+    }
+
+
+  ],
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "An Acme Product Entity",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "DisplayCollectionName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Acme Products",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Acme Product",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "HasActivities": false,
+  "HasNotes": false,
+  "IsActivity": false,
+  "OwnershipType": "UserOwned",
+  "SchemaName": "cpt_AcmeProduct"
+}  

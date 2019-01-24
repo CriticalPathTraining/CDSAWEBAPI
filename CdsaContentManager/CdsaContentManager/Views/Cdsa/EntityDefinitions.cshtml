@@ -1,0 +1,26 @@
+﻿@model List<CdsaContentManager.Models.EntityDefinition>
+
+<div class="row" >
+
+  <table class="table table-bordered table-striped table-sm">
+    <tr>
+      <th>Display Name</th>
+      <th>LogicalName</th>
+      <th>EntitySetName</th>
+      <th>IsCustomEntity</th>
+    </tr>
+    @foreach (var entity in Model) {
+      if (entity.DisplayName.LocalizedLabels.Count > 0) {
+        <tr>
+          <td>@entity.DisplayName.LocalizedLabels[0].Label</td>
+          <td>@entity.LogicalName</td>
+          <td>@entity.EntitySetName</td>
+          <td>@entity.IsCustomEntity</td>
+        </tr>
+
+      }
+    }
+
+  </table>
+
+</div>

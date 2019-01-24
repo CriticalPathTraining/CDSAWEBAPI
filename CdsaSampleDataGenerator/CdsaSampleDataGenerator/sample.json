@@ -1,0 +1,16 @@
+{
+  "@odata.context": "https://globaldisco.crm.dynamics.com/api/discovery/v1.0/$metadata#Instances",
+  "value": [
+    {
+      "Id": "10dd1279-41bb-4c51-b8b2-b2584778d345",
+      "UniqueName": "org97b88bc4",
+      "UrlName": "org21f117d3",
+      "FriendlyName": "Dev Env",
+      "State": 0,
+      "Version": "9.1.0.876",
+      "Url": "https://org21f117d3.crm.dynamics.com",
+      "ApiUrl": "https://org21f117d3.api.crm.dynamics.com",
+      "LastUpdated": "2018-12-09T10:08:03.214Z"
+    }
+  ]
+}

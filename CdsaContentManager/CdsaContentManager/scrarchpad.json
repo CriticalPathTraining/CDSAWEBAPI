@@ -1,0 +1,21 @@
+{
+  "value": [
+    {
+      "IsUserSysAdmin": true,
+      "Region": "NA",
+      "Purpose": "",
+      "StatusMessage": 6,
+      "TrialExpirationDate": "2019-01-26T00:00:00Z",
+      "OrganizationType": 11,
+      "Id": "f61d9f70-2c75-40a1-b156-9ee1fe88daa6",
+      "UniqueName": "org102569f0",
+      "UrlName": "org4bbc0847",
+      "FriendlyName": "CPTDEV1",
+      "State": 0,
+      "Version": "9.1.0.1006",
+      "Url": "https://org4bbc0847.crm.dynamics.com",
+      "ApiUrl": "https://org4bbc0847.api.crm.dynamics.com",
+      "LastUpdated": "2018-12-27T14:00:30.438Z"
+    }
+  ]
+}

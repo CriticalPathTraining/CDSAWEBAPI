@@ -1,0 +1,48 @@
+﻿@model List<CdsaContentManager.Models.Contact>
+@{ var Contacts = Model; }
+
+<div class="toolbar row">
+
+  <ul class="nav">
+    <li class="nav-item">
+      @Html.ActionLink("Add New Contact", "AddContact", "Cdsa", null, new { @class = "nav-link" })
+    </li>
+    <li class="nav-item">
+      @Html.ActionLink("Add 10 Contacts", "Add10Contacts", "Cdsa", null, new { @class = "nav-link" })
+    </li>
+    <li class="nav-item">
+      @Html.ActionLink("Delete All Contacts", "DeleteContacts", "Cdsa", null, new { @class = "nav-link" })
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+<div class="row" >
+
+  @if (Contacts.Count > 0) {
+    <table class="table table-bordered table-striped table-sm">
+      <tr>
+        <th>first name</th>
+        <th>last name</th>
+        <th>email</th>
+        <th>contact id</th>
+      </tr>
+      @foreach (var contact in Contacts) {
+        <tr>
+          <td>@contact.firstname</td>
+          <td>@contact.lastname</td>
+          <td>@contact.emailaddress1</td>
+          <td>@contact.contactid</td>
+        </tr>
+      }
+    </table>
+  }
+  else {
+    <div class="badge-warning AddMargin" >There are no contacts</div>
+    <div>&nbsp;</div>
+  }
+
+</div>

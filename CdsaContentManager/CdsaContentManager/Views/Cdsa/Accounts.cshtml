@@ -1,0 +1,42 @@
+﻿@model List<CdsaContentManager.Models.Account>
+@{ var Accounts = Model; }
+
+<div class="toolbar row">
+
+  <ul class="nav">
+    <li class="nav-item">
+      @Html.ActionLink("Add New Account", "AddAccount", "Cdsa", null, new { @class = "nav-link" })
+    </li>
+    <li class="nav-item">
+      @Html.ActionLink("Add 5 Accounts", "Add5Accounts", "Cdsa", null, new { @class = "nav-link" })
+    </li>
+    <li class="nav-item">
+      @Html.ActionLink("Delete All Accounts", "DeleteAccounts", "Cdsa", null, new { @class = "nav-link" })
+    </li>
+
+  </ul>
+
+</div>
+
+<div class="row">
+
+  @if (Accounts.Count > 0) {
+    <table class="table table-bordered table-striped table-sm">
+      <tr>
+        <th>Account Name</th>
+        <th>Account Id</th>
+      </tr>
+      @foreach (var account in Accounts) {
+        <tr>
+          <td>@account.name</td>
+          <td>@account.accountid</td>
+        </tr>
+      }
+    </table>
+  }
+  else {
+    <div class="badge-warning AddMargin">There are no contacts</div>
+    <div>&nbsp;</div>
+  }
+
+</div>

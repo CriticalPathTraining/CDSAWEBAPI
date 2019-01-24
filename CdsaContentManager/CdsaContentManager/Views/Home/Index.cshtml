@@ -1,0 +1,66 @@
+﻿<div id="homePageContainer" class="row">
+
+  @if (User.Identity.IsAuthenticated) {
+
+    <div class="jumbotron">
+      <h2>CDS for Apps Content Manager</h2>
+
+      <div class="fluid-container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="homePageWidget">
+              <h3>Data</h3>
+              <div>
+                <p>Work directly with CDS for Apps business data.</p>
+                <ul>
+                  <li><a href="/cdsa/accounts">Accounts</a></li>
+                  <li><a href="/cdsa/contacts">Contacts</a></li>
+                  <li><a href="/cdsa/activities">Activities</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="homePageWidget">
+              <h3>Metadata</h3>
+              <div>
+                <p>Inspect standard & custom entites in this CDSA instance.</p>
+                <ul>
+                  <li><a href="/cdsa/EntityDefinitions">Entity Definitions</a></li>
+                  <li><a href="/cdsa/CustomEntities">Custom Entities</a></li>
+                  <li><a href="/cdsa/ActivityBasedEntities">Activity-based Entities</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="homePageWidget">
+              <h3>Customizations</h3>
+              <div>
+                <p>Inspect publishers & solutions in this CDSA instance.</p>
+                <ul>
+                  <li><a href="/cdsa/publishers">Publishers</a></li>
+                  <li><a href="/cdsa/solutions">Solutions</a></li>
+                  <li><a href="/cdsa/customizations">Customizations</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  else {
+    <div class="alert alert-primary" role="alert">
+
+      <h2>Sign In to begin using this sample application</h2>
+
+      <p class="text-success">Once you have signed in, you will be able to begin working with the CDS for Apps.</p>
+
+    </div>
+
+  }
+
+
+</div>
+

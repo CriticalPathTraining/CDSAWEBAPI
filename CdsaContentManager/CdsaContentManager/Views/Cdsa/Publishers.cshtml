@@ -1,0 +1,23 @@
+﻿@model List<CdsaContentManager.Models.Publisher>
+
+<div class="row" >
+
+  <table class="table table-bordered table-striped table-sm">
+    <tr>
+      <th>friendlyname</th>
+      <th>customizationprefix</th>
+      <th>publisherid</th>
+      <th>uniquename</th>
+    </tr>
+    @foreach (var publisher in Model) {
+        <tr>
+          <td>@publisher.friendlyname</td>
+          <td>@publisher.customizationprefix</td>
+          <td>@publisher.publisherid</td>
+          <td>@publisher.uniquename</td>
+        </tr>
+    }
+
+  </table>
+
+</div>

@@ -1,0 +1,8 @@
+﻿@helper LeftNavItem(string caption, string Action, string Controller, string Icon) {
+<li class="leftNavItem" style="clear:left" >
+  <a href='/@Controller/@Action' class="leftNavLink" >
+    <i class="leftNavIcon fa @Icon" ></i>
+    <span class="leftNavItemCaption" >@caption</span>
+  </a>
+</li>
+}

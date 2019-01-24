@@ -1,0 +1,46 @@
+﻿@model List<CdsaContentManager.Models.CdsaInstance>
+@{ var Environments = Model; }
+
+<div class="row">
+
+  @if (Environments.Count > 0) {
+    <table class="table table-bordered table-striped table-sm">
+      <tr>
+        <th>Friendly Name</th>
+        <th>UniqueName</th>
+        <th>Region</th>
+        <th>ApiUrl</th>
+      </tr>
+      @foreach (var environment in Environments) {
+        <tr>
+          <td>@environment.FriendlyName</td>
+          <td>@environment.UniqueName</td>
+          <td>@environment.Region</td>
+          <td>@environment.ApiUrl</td>
+        </tr>
+      }
+    </table>
+
+
+
+    <h3>Select Environment</h3>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        @foreach (var environment in Environments) {
+        <a class="dropdown-item" href="#">@environment.FriendlyName (@environment.UniqueName)</a>
+        }
+        </div>
+    </div>
+
+
+  }
+  else {
+    <div class="badge-warning AddMargin">There are no environments</div>
+    <div>&nbsp;</div>
+  }
+
+</div>
